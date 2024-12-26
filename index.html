@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JS</title>
+    <link rel="stylesheet" href="styles.css">  
+</head>
+<body>
+    <h1>Funciones en JavaScript</h1>
+    
+    <!-- Palindrome Checker -->
+    <div class="function-container">
+        <h2>1. Palindrome Checker</h2>
+        <p class="formatted-text">
+Función que devuelve true si se le pasa un palíndromo,
+de lo contrario, devuelve false.
+          
+Nota: se deben borrar todos los caracteres no alfanuméricos 
+(puntuación, espacios y símbolos) y ponerlo todo en la misma
+capitalización (minúsculas o mayúsculas)
+        </p>
+        <label for="palindrome-input">· Introduce un texto:</label>
+        <input type="text" id="palindrome-input">
+        <button onclick="checkPalindrome()">Comprobar</button>
+        <div class="result" id="palindrome-result"></div>
+    </div>
+
+    <!-- Roman Number Converter -->
+    <div class="function-container">
+        <h2>2. Roman Number Converter</h2>
+        <p class="formatted-text">
+Función que toma un número arábigo y devuelve su equivalente en número romano (en mayúsculas)
+        </p>
+        <label for="roman-input">· Introduce un número:</label>
+        <input type="number" id="roman-input">
+        <button onclick="convertRoman()">Convertir</button>
+        <div class="result" id="roman-result"></div>
+    </div>
+
+    <!-- ROT13 Converter -->
+    <div class="function-container">
+        <h2>3. ROT13 Converter</h2>
+        <p class="formatted-text">
+Función que toma un string codificado en ROT13, lo descifra y lo devuelve.
+
+El cifrado ROT13 desplaza los valores de las letras 13 lugares.
+Así, A ↔ N, B ↔ O y así sucesivamente.
+        </p>
+        <label for="rot13-input">· Introduce texto en ROT13:</label>
+        <input type="text" id="rot13-input">
+        <button onclick="decodeRot13()">Decodificar</button>
+        <div class="result" id="rot13-result"></div>
+    </div>
+
+    <!-- US Phone Check -->
+    <div class="function-container">
+        <h2>4. US Phone Check</h2>
+        <p class="formatted-text">
+Función que devuelve true si se le pasa un string correspondiente
+a un formato válido de número telefónico de los EEUU.
+          
+Notas sobre el formato:
+    -Puede o no tener un 1 al principio como código de país. 
+    -Puede o no tener los tres primeros dígitos entre paréntesis (código de área).
+    -Los bloques de dígitos pueden o no estar separados por guiones o espacios:
+
+        Ejemplos:
+            555-555-5555
+            (555) 555-5555
+            1 555 555 5555
+
+        ·No debe haber más de un separador consecutivo ni al final del número.
+
+    -No debe haber caracteres especiales que no sean números, guiones o paréntesis.
+        </p>
+        <label for="phone-input">· Introduce un número de teléfono:</label>
+        <input type="text" id="phone-input">
+        <button onclick="checkPhone()">Validar</button>
+        <div class="result" id="phone-result"></div>
+    </div>
+
+    <!-- Cash Register -->
+    <div class="function-container">
+        <h2>5. Cash Register</h2>
+        <p class="formatted-text">
+Función que recibe tres argumentos:
+    -Precio de la compra (price)
+    -Cantidad pagada (cash)
+    -Efectivo en el cajón "cash-in-drawer" (cid).
+      
+La función siempre devuelve un objeto con una clave 'status' (estado) y una clave 'change' (cambio).
+
+    -Devuelve {status: "INSUFFICIENT_FUNDS", change: []} si el cid es menor a la vuelta debida, 
+    o si no se puede devolver el cambio exacto.
+      
+    -Devuelve {status: "CLOSED", change: [...]} con el cid como el valor para la clave change 
+    si es igual al cambio debido.
+      
+    -Devuelve {status: "OPEN", change: [...]} en cualquier otro caso,
+    con el cambio debido en monedas y billetes, ordenados de mayor a menor
+    como el valor de la clave change.
+        </p>
+        <label for="cash-price">· Precio:</label>
+        <input type="number" step="0.01" id="cash-price">
+        <label for="cash-paid">· Pagado:</label>
+        <input type="number" step="0.01" id="cash-paid">
+        <label for="cash-cid">· Caja (JSON):</label>
+        <textarea id="cash-cid" rows="4">[["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]</textarea>
+        <button onclick="checkRegister()">Calcular</button>
+        <div class="result" id="cash-result"></div>
+    </div>
+
+<script src="script.js">    </script>

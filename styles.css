@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+.function-container {
+    max-width: 700px; /* Ancho máximo de cada sección */
+    margin: 0 auto 30px; /* Centrado horizontal y espaciado inferior */
+    padding: 20px;
+    border: 1px solid #ccc; /* Opcional: bordes para separar secciones */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Color de fondo suave */
+    overflow: hidden; /* Evita el desbordamiento */
+}
+label {
+    font-weight: bold;
+    display: block; /* Asegura que esté encima del input */
+    margin-bottom: 5px;
+}
+input, textarea {
+    width: 100%; /* Por defecto ocupa todo el ancho del contenedor */
+    max-width: 500px; /* Limita el ancho máximo */
+    min-width: 200px; /* Asegura un ancho mínimo razonable */
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+.formatted-text {
+    white-space: pre-wrap; /* Ajusta el texto largo para que envuelva correctamente */
+    word-wrap: break-word; /* Rompe palabras largas */
+    font-family: monospace; /* Opcional: fuente fija para formateo */
+    background-color: #f4f4f4; /* Fondo para diferenciar */
+    padding: 10px;
+    border-radius: 5px;
+}
+h1 {
+    text-align: center; /* Encabezado centrado */
+}
